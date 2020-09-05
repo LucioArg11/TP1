@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1599184468 source:e:\escritorio\programacion\tp1\matematica\main.c
+	"Matematica.h"
+
+1599184468 e:\escritorio\programacion\tp1\matematica\matematica.h
+	<stdio.h>
+	<stdlib.h>
+
+1599184500 source:e:\escritorio\programacion\tp1\matematica\matematica.c
+	"Matematica.h"
+
