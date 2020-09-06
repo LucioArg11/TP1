@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1599347456 source:e:\escritorio\programacion\tps\tp1\string\main.c
+	"String.h"
+
+1599347473 e:\escritorio\programacion\tps\tp1\string\string.h
+	<stdio.h>
+	<stdlib.h>
+
+1599347456 source:e:\escritorio\programacion\tps\tp1\string\string.c
+	"String.h"
+
