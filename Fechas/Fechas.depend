@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1599546542 source:e:\escritorio\programacion\tps\tp1\fechas\main.c
+	"Fechas.h"
+
+1599545459 e:\escritorio\programacion\tps\tp1\fechas\fechas.h
+	<stdio.h>
+	<stdlib.h>
+
+1599546495 source:e:\escritorio\programacion\tps\tp1\fechas\fechas.c
+	"Fechas.h"
+
