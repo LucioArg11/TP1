@@ -1,7 +1,19 @@
 #include "Vectores.h"
-void insertaElemento(int *v,int nro)
+void mostrarVector(int *v,int cantE)
 {
-    int *pf=v+TAM;
+    int *pf=v+cantE;
+    while(v<pf)
+    {
+        printf("%d\n",*v);
+        v++;
+    }
+}
+
+int insertaElementoAscendente(int *v,int nro,int *cantE)
+{
+    if(*cantE>=TAM)
+        return 0;
+    int *pf= v+ *cantE;
     while(*v<nro && v<pf)
     {
         v++;
@@ -12,21 +24,18 @@ void insertaElemento(int *v,int nro)
         pf--;
     }
     *(pf+1)=nro;
+    *cantE=*cantE+1;
+    return 1;
 }
 
-void mostrarVector(int *v)
-{
-    int *pf=v+TAM;
-    while(v<pf)
-    {
-        printf("%d\n",*v);
-        v++;
-    }
-}
 
-void insertaElementoDescendente(int *v,int nro)
+
+int insertaElementoDescendente(int *v,int nro,int *cantE)
 {
-    int *pf=v+TAM;
+    if(*cantE>=TAM)
+        return 0;
+    int *pf=v+ *cantE;
+
     while(*v>nro && v<pf)
     {
         v++;
@@ -37,36 +46,54 @@ void insertaElementoDescendente(int *v,int nro)
         pf--;
     }
     *(pf+1)=nro;
+    *cantE=*cantE+1;
+    return 1;
 }
 
-void eliminaPrimeraAparicion(int *v,int nro)
+int eliminaPrimeraAparicion(int *v,int nro,int *cantE)
 {
-    int *pf=v+TAM;
+    int *pf=v+ *cantE;
     while(*v!=nro && v<pf)
     {
         v++;
     }
+    if(v>pf)
+        return 0;
     while(v<pf)
     {
         *v=*(v+1);
         v++;
     }
+    return 1;
 }
 
-void eliminaTodasApariciones(int *v,int nro)
+int eliminaTodasApariciones(int *v,int nro,int *cantE)
 {
-    int *pf=v+TAM,*aux=v+1;
+    int *pf=v+*cantE,*aux=v,cambio,cont=1;
+    if(*v==nro)
+        cont=0;
     while(v<pf)
     {
-        while(*aux==nro)
+        while(*aux==nro && aux<pf)
         {
             aux++;
+            cont++;
         }
-        while(v!=aux)
+        if(aux<pf)
+            *cantE=*cantE-cont;
+        cont=0;
+        if(v!=aux && aux<pf)
         {
-            *v=*aux;
+            cambio=*aux;
+            *aux=*v;
+            *v=cambio;
+            *cantE=*cantE+1;
         }
+        cambio=*cantE;//fffff
         v++;
-        aux=v;
+        if(aux<pf)
+            aux=v;
     }
+    return 1;
 
+}

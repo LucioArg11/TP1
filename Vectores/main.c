@@ -2,9 +2,11 @@
 
 int main()
 {
-    int v[TAM]={1,2,4,5,6};
+    int v[TAM]={1,2,7,3,4,3,3,3,5};
     int v2[TAM]={6,5,4,3,1};
-    eliminaPrimeraAparicion(v,2);
-    mostrarVector(v);
+    int cantE=9;
+
+    eliminaTodasApariciones(v,3,&cantE);
+    mostrarVector(v,4);
     return 0;
 }

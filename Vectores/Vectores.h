@@ -3,13 +3,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM 5
+#define TAM 10
 
-void insertaElementoAscendente(int *v,int nro);
-void insertaElementoDescendente(int *v,int nro);
-void mostrarVector(int *v);
-void eliminaPrimeraAparicion(int *v,int nro);
-void eliminaTodasApariciones(int *v,int nro)
+void mostrarVector(int *v,int cantE);
+int insertaElementoAscendente(int *v,int nro,int *cantE);
+int insertaElementoDescendente(int *v,int nro,int *cantE);
+int eliminaPrimeraAparicion(int *v,int nro,int *cantE);
+int eliminaTodasApariciones(int *v,int nro,int *cantE);
 
 
 #endif // VECTORES_H_INCLUDED
