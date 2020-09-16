@@ -89,7 +89,6 @@ int eliminaTodasApariciones(int *v,int nro,int *cantE)
             *v=cambio;
             *cantE=*cantE+1;
         }
-        cambio=*cantE;//fffff
         v++;
         if(aux<pf)
             aux=v;
