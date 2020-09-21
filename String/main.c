@@ -3,9 +3,9 @@
 int main()
 {
     int letra;
-    char v[]="anita la gorda lagartona no traga la droga latina";
+    char v[]="anita come";
     char a='a';
-    letra=valorNumerico(v);
+    letra=strlen(v);
     printf("%d",letra);
     return 0;
 }
