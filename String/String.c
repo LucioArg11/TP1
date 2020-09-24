@@ -59,3 +59,39 @@ size_t strlen(const char *s)
     return cont;
 }
 
+/**Se pide desarrollar una estrategia para resolver una función que permite 'normalizar' una cadena de caracteres.
+
+    Dada una cadena de texto :
+
+    1) Borrar los espacios en blanco de toda la cadena
+    2) Transformar a mayúsculas la primer letra de cada palabra y el resto a minúsculas
+    3) Normalizar la cadena al formato : APELLIDO(S), Nombre(s)". Debe haber un espacio luego de la coma, ninguno atrás o delante
+**/
+
+void saca_espacios(char *s)
+{
+    char *aux,
+          cambio;
+    int espacios=0;
+    while(isspace(*s))///para desplazar el comienzo de la cadena en caso de que no empiece con letra
+        s++;
+
+    while(*s)
+    {
+        while(isalpha(*s))
+            s++;
+        while(isspace(*s))
+        {
+            s++;
+            espacios++;
+        }
+        aux=s;
+        if(espacios>1)
+        {
+            while(isalpha(*s))
+                s++;
+        }
+
+    }
+
+}

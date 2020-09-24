@@ -3,9 +3,9 @@
 int main()
 {
     int letra;
-    char v[]="anita come";
+    char v[]="anita  come     un";
     char a='a';
-    letra=strlen(v);
+    saca_espacios(v);
     printf("%d",letra);
     return 0;
 }

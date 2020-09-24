@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1600657461 source:e:\escritorio\programacion\tps\tp1\string\main.c
+1600912036 source:e:\escritorio\programacion\tps\tp1\string\main.c
 	"String.h"
 
-1600657461 e:\escritorio\programacion\tps\tp1\string\string.h
+1600916166 e:\escritorio\programacion\tps\tp1\string\string.h
 	<stdio.h>
 	<stdlib.h>
 
-1600656833 source:e:\escritorio\programacion\tps\tp1\string\string.c
+1600915908 source:e:\escritorio\programacion\tps\tp1\string\string.c
 	"String.h"
 
